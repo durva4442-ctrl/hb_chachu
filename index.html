@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AFTAB CHACHU: THE AWARA EDITION</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700;900&display=swap');
+
+        :root {
+            --neon-pink: #ff00ff;
+            --neon-green: #00ff00;
+            --neon-blue: #00ffff;
+            --neon-yellow: #ffff00;
+            --bright-purple: #9b59b6;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffffff;
+            /* BLINDING BRIGHT */
+            color: #222;
+            margin: 0;
+            padding: 20px;
+            overflow-x: hidden;
+            min-height: 100vh;
+            background-image: radial-gradient(#ddd 10%, transparent 10%);
+            background-size: 20px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            border: 10px solid;
+            border-image: linear-gradient(45deg, var(--neon-pink), var(--neon-blue), var(--neon-green)) 1;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 20px 20px 0px rgba(0, 0, 0, 0.1);
+            position: relative;
+            /* Lower z-index so photos can hang IN FRONT */
+            z-index: 1;
+        }
+
+        h1 {
+            font-size: 4rem;
+            color: var(--bright-purple);
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            margin-bottom: 0;
+            text-shadow: 3px 3px 0 var(--neon-yellow), 6px 6px 0 var(--neon-pink);
+            animation: textPulse 1s ease-in-out infinite;
+        }
+
+        @keyframes textPulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.02);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .subtitle {
+            background-color: var(--neon-yellow);
+            color: black;
+            font-weight: bold;
+            display: inline-block;
+            padding: 5px 15px;
+            margin-top: 10px;
+            transform: rotate(-1deg);
+        }
+
+        /* --- THE ROAST GRID --- */
+        .roast-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .roast-card {
+            background: white;
+            padding: 20px;
+            border: 4px solid #222;
+            box-shadow: 8px 8px 0px #222;
+            text-align: left;
+        }
+
+        .roast-card h3 {
+            color: black;
+            margin-top: 0;
+            text-decoration: underline var(--neon-pink);
+        }
+
+        /* --- IVY & PHOTO STYLES (THE IMPORTANT PART) --- */
+        .ivy-vine {
+            position: fixed;
+            top: -20px;
+            width: 8px;
+            z-index: 9999;
+            /* VERY HIGH Z-INDEX TO STAY IN FRONT */
+            transform-origin: top center;
+            animation: swing 3s ease-in-out infinite;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 4px;
+            pointer-events: none;
+            /* Allows clicks to pass through to buttons underneath */
+        }
+
+        .hanging-photo {
+            width: 140px;
+            height: 140px;
+            border: 10px solid #fff;
+            object-fit: cover;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            margin-top: auto;
+            border-bottom: 35px solid #fff;
+            /* Polaroid look */
+            pointer-events: auto;
+            /* Re-enable pointer events for the photo itself if needed */
+        }
+
+        @keyframes swing {
+
+            0%,
+            100% {
+                transform: rotate(-8deg);
+            }
+
+            50% {
+                transform: rotate(8deg);
+            }
+        }
+
+        .button {
+            background: var(--neon-pink);
+            color: white;
+            padding: 20px 40px;
+            font-size: 1.8rem;
+            font-weight: bold;
+            border: 5px solid black;
+            cursor: pointer;
+            box-shadow: 8px 8px 0px black;
+            text-transform: uppercase;
+            position: relative;
+            z-index: 2;
+            /* Slightly above container, but below ivy */
+        }
+
+        .button:hover {
+            background: var(--neon-blue);
+        }
+
+        .button:active {
+            transform: translate(4px, 4px);
+            box-shadow: 4px 4px 0px black;
+        }
+
+        .scrolling-insult {
+            background: black;
+            color: var(--neon-yellow);
+            padding: 15px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 50px;
+            text-transform: uppercase;
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>HBD,<br>AFTAB CHACHU!</h1>
+        <p class="subtitle">The Awara of the Century is Another Year Older!</p>
+
+        <div class="roast-grid">
+            <div class="roast-card">
+                <h3>🗺️ Location Status</h3>
+                <p>Nobody knows where he is. Probably wandering around somewhere he shouldn't be, wearing that one shirt
+                    he loves too much.</p>
+            </div>
+            <div class="roast-card">
+                <h3>📞 Reliability</h3>
+                <p>Will answer your call... eventually. Usually with: "Ha, bolo? Main bas nikal hi raha hoon." (He is
+                    still in bed).</p>
+            </div>
+            <div class="roast-card">
+                <h3>💸 Financial Status</h3>
+                <p>"Awara lifestyle, broke budget." Experts still can't explain how he survives, but he always manages
+                    to get chai.</p>
+            </div>
+            <div class="roast-card">
+                <h3>😎 "Plan" Making</h3>
+                <p>His plans have a 99% failure rate, but the 1% chance they work? It's chaos you’ll never forget.</p>
+            </div>
+        </div>
+
+        <button class="button" onclick="dropTheIvy()">
+            RELEASE THE AWARA ARTIFACTS
+        </button>
+
+        <marquee class="scrolling-insult" scrollamount="12">
+            WARNING: AWARA CHACHU INCOMIN... WHERE IS MY MONEY?... HAPPY BIRTHDAY YOU WANDERER... STOP SLEEPING AND
+            ANSWER THE PHONE...
+        </marquee>
+    </div>
+
+    <script>
+        // *** REPLACE THESE WITH LINKS TO HIS REAL WILD PHOTOS ***
+        const chachuPhotos = [
+            "IMG_20260408_235514_063.jpg",
+            "IMG_20260408_235553_638.jpg",
+            "IMG_20260409_001338_123.jpg",
+            "IMG_20260409_001408_613.jpg"
+        ];
+
+        function dropTheIvy() {
+            // Drops 6 photos because chaotic
+            for (let i = 0; i < 6; i++) {
+                setTimeout(createVine, i * 200);
+            }
+        }
+
+        function createVine() {
+            const vine = document.createElement('div');
+            vine.className = 'ivy-vine';
+
+            // Randomize position across the full window width
+            const randomX = Math.floor(Math.random() * (window.innerWidth - 180));
+            // Vary the height significantly
+            const randomHeight = Math.floor(Math.random() * 500) + 150;
+            const randomDelay = Math.random() * 1; // Shorter delay for faster chaos
+            const randomPhoto = chachuPhotos[Math.floor(Math.random() * chachuPhotos.length)];
+
+            vine.style.left = randomX + 'px';
+            vine.style.height = randomHeight + 'px';
+            vine.style.animationDelay = randomDelay + 's';
+
+            // Random neon color gradient for the vine
+            const neonColors = ['#ff00ff', '#00ff00', '#00ffff', '#ffff00'];
+            const color1 = neonColors[Math.floor(Math.random() * neonColors.length)];
+            const color2 = neonColors[Math.floor(Math.random() * neonColors.length)];
+            vine.style.background = `linear-gradient(${color1}, ${color2}, #fff)`;
+
+            const img = document.createElement('img');
+            img.src = randomPhoto;
+            img.className = 'hanging-photo';
+
+            vine.appendChild(img);
+            document.body.appendChild(vine);
+        }
+    </script>
+</body>
+
+</html>
